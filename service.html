@@ -5,198 +5,214 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services | Veyon Exim</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{
-  background:linear-gradient(180deg,#020617,#0f172a);
-  color:white;
-  overflow-x:hidden;
+/* ================= BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* PARTICLES */
-#particles{
-  position:fixed;
-  width:100%;
-  height:100%;
-  z-index:-1;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #020617;
+  color: white;
 }
 
-/* NAV */
-header{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 50px;
+/* ================= CONTAINER ================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-header h1{color:#38bdf8;}
-
-nav a{
-  color:#cbd5f5;
-  margin-left:20px;
-  text-decoration:none;
+/* ================= NAV ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:120px 20px;
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #38bdf8;
 }
 
-.hero h2{
-  font-size:48px;
-  background:linear-gradient(90deg,#38bdf8,#6366f1);
-  -webkit-background-clip:text;
-  color:transparent;
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 14px;
 }
 
-.hero p{
-  color:#94a3b8;
-  margin:15px 0;
+nav a:hover {
+  color: #38bdf8;
 }
 
-.btn{
-  padding:12px 25px;
-  border-radius:30px;
-  border:none;
-  background:linear-gradient(90deg,#38bdf8,#6366f1);
-  color:white;
-  cursor:pointer;
-  margin:10px;
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 100px 0;
 }
 
-/* SECTION */
-section{
-  padding:80px 20px;
-  text-align:center;
+.hero h1 {
+  font-size: 42px;
+  background: linear-gradient(90deg,#38bdf8,#6366f1);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+.hero p {
+  color: #94a3b8;
+  margin-top: 10px;
 }
 
-/* IMAGE CARDS */
-.card{
-  position:relative;
-  height:280px;
-  border-radius:15px;
-  overflow:hidden;
-  opacity:0;
-  transform:translateY(40px);
-  transition:0.6s;
+/* ================= SECTION ================= */
+section {
+  padding: 80px 0;
+  text-align: center;
 }
 
-.card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(0.6);
+h2 {
+  margin-bottom: 30px;
 }
 
-.card h4,.card p{
-  position:absolute;
-  left:20px;
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 25px;
 }
 
-.card h4{bottom:50px;color:#38bdf8;}
-.card p{bottom:20px;color:#ddd;}
-
-.card:hover img{
-  transform:scale(1.1);
+/* ================= SERVICE CARD ================= */
+.card {
+  position: relative;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-/* PROCESS */
-.process-container{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:40px;
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
 }
 
-.step{
-  text-align:center;
+.card h3,
+.card p {
+  position: absolute;
+  left: 20px;
 }
 
-.circle{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  background:linear-gradient(90deg,#38bdf8,#6366f1);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:auto;
-  box-shadow:0 0 20px #38bdf8;
+.card h3 {
+  bottom: 50px;
+  color: #38bdf8;
 }
 
-.line{
-  width:80px;
-  height:2px;
-  background:#38bdf8;
-  margin:0 10px;
+.card p {
+  bottom: 20px;
+  color: #ddd;
 }
 
-/* WHY */
-.why-card{
-  padding:25px;
-  border-radius:15px;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.1);
-  transition:0.3s;
+/* ================= PROCESS ================= */
+.process {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.why-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 25px rgba(56,189,248,0.5);
+.step {
+  margin: 20px;
 }
 
-/* FORM */
-form{
-  max-width:500px;
-  margin:auto;
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(#38bdf8,#6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: bold;
 }
 
-input,textarea{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border:none;
-  border-radius:8px;
+/* ================= WHY ================= */
+.why-card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 12px;
 }
 
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  background:#25D366;
-  padding:18px;
-  border-radius:50%;
-  color:white;
-  text-decoration:none;
+/* ================= CTA ================= */
+.cta {
+  margin-top: 20px;
 }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg,#38bdf8,#6366f1);
+  color: white;
+  cursor: pointer;
 }
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<canvas id="particles"></canvas>
+<div class="container">
 
 <header>
-  <h1>Veyon Exim</h1>
+  <div class="logo">Veyon Exim</div>
   <nav>
     <a href="index.html">Home</a>
     <a href="#">Services</a>
@@ -204,99 +220,87 @@ footer{
 </header>
 
 <section class="hero">
-  <h2>Our Services</h2>
-  <p>Powering Global Trade</p>
-  <button class="btn" onclick="openWhatsApp()">Get Quote</button>
+  <h1>Our Services</h1>
+  <p>Smart Trading Solutions</p>
 </section>
 
-<!-- SERVICES -->
 <section>
-  <h3>Core Services</h3>
+  <h2>Core Services</h2>
+
   <div class="grid">
-    <div class="card"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d"><h4>Export</h4><p>Global</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5"><h4>Import</h4><p>Sourcing</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0"><h4>Supply</h4><p>India</p></div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
+      <h3>Export</h3>
+      <p>Global delivery</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5">
+      <h3>Import</h3>
+      <p>Smart sourcing</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
+      <h3>Supply</h3>
+      <p>India wide</p>
+    </div>
+
   </div>
+
 </section>
 
-<!-- PROCESS -->
 <section>
-  <h3>Our Process</h3>
-  <div class="process-container">
-    <div class="step"><div class="circle">1</div><h4>Requirement</h4></div>
-    <div class="line"></div>
-    <div class="step"><div class="circle">2</div><h4>Sourcing</h4></div>
-    <div class="line"></div>
-    <div class="step"><div class="circle">3</div><h4>Delivery</h4></div>
+  <h2>Our Process</h2>
+
+  <div class="process">
+    <div class="step">
+      <div class="circle">1</div>
+      <p>Requirement</p>
+    </div>
+    <div class="step">
+      <div class="circle">2</div>
+      <p>Sourcing</p>
+    </div>
+    <div class="step">
+      <div class="circle">3</div>
+      <p>Delivery</p>
+    </div>
   </div>
+
 </section>
 
-<!-- WHY -->
 <section>
-  <h3>Why Choose Us</h3>
+  <h2>Why Choose Us</h2>
+
   <div class="grid">
-    <div class="why-card"><h4>Trusted Network</h4><p>Verified suppliers</p></div>
-    <div class="why-card"><h4>Best Pricing</h4><p>Competitive rates</p></div>
-    <div class="why-card"><h4>Fast Support</h4><p>Quick response</p></div>
+    <div class="why-card">Trusted Network</div>
+    <div class="why-card">Best Pricing</div>
+    <div class="why-card">Fast Support</div>
+  </div>
+
+</section>
+
+<section>
+  <h2>Start Your Order</h2>
+  <div class="cta">
+    <button class="btn" onclick="openWhatsApp()">Get Quote</button>
   </div>
 </section>
 
-<!-- QUOTE -->
-<section id="quote">
-  <h3>Request a Quote</h3>
-  <form>
-    <input placeholder="Product">
-    <input placeholder="Quantity">
-    <input placeholder="Location">
-    <textarea placeholder="Details"></textarea>
-    <button class="btn">Submit</button>
-  </form>
-</section>
+<footer>
+  © 2026 Veyon Exim
+</footer>
+
+</div>
 
 <a class="whatsapp" href="https://wa.me/919444384637">💬</a>
 
-<footer>© 2026 Veyon Exim</footer>
-
 <script>
-// WhatsApp
 function openWhatsApp(){
-  window.open("https://wa.me/919444384637?text=Hello%20I%20want%20a%20quote");
+  window.open("https://wa.me/919444384637?text=Hello%20I%20need%20service%20details");
 }
-
-// Scroll animation
-const cards=document.querySelectorAll('.card');
-window.addEventListener('scroll',()=>{
-  cards.forEach(card=>{
-    const rect=card.getBoundingClientRect();
-    if(rect.top<window.innerHeight-100){
-      card.style.opacity="1";
-      card.style.transform="translateY(0)";
-    }
-  });
-});
-
-// Particles
-const canvas=document.getElementById("particles");
-const ctx=canvas.getContext("2d");
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-
-let particles=[];
-for(let i=0;i<50;i++){
-  particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2});
-}
-
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  particles.forEach(p=>{
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle="#38bdf8";
-    ctx.fill();
-  });
-  requestAnimationFrame(animate);
-}
-animate();
 </script>
 
 </body>
