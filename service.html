@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Veyon Exim</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  background:linear-gradient(180deg,#020617,#0f172a);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* PARTICLES */
+#particles{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* NAV */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+}
+
+header h1{color:#38bdf8;}
+
+nav a{
+  color:#cbd5f5;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h2{
+  font-size:48px;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  color:#94a3b8;
+  margin:15px 0;
+}
+
+.btn{
+  padding:12px 25px;
+  border-radius:30px;
+  border:none;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+  color:white;
+  cursor:pointer;
+  margin:10px;
+}
+
+/* SECTION */
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+/* IMAGE CARDS */
+.card{
+  position:relative;
+  height:280px;
+  border-radius:15px;
+  overflow:hidden;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s;
+}
+
+.card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.6);
+}
+
+.card h4,.card p{
+  position:absolute;
+  left:20px;
+}
+
+.card h4{bottom:50px;color:#38bdf8;}
+.card p{bottom:20px;color:#ddd;}
+
+.card:hover img{
+  transform:scale(1.1);
+}
+
+/* PROCESS */
+.process-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.step{
+  text-align:center;
+}
+
+.circle{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+  box-shadow:0 0 20px #38bdf8;
+}
+
+.line{
+  width:80px;
+  height:2px;
+  background:#38bdf8;
+  margin:0 10px;
+}
+
+/* WHY */
+.why-card{
+  padding:25px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.why-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px rgba(56,189,248,0.5);
+}
+
+/* FORM */
+form{
+  max-width:500px;
+  margin:auto;
+}
+
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  padding:18px;
+  border-radius:50%;
+  color:white;
+  text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<header>
+  <h1>Veyon Exim</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Services</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Our Services</h2>
+  <p>Powering Global Trade</p>
+  <button class="btn" onclick="openWhatsApp()">Get Quote</button>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <h3>Core Services</h3>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d"><h4>Export</h4><p>Global</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5"><h4>Import</h4><p>Sourcing</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0"><h4>Supply</h4><p>India</p></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <h3>Our Process</h3>
+  <div class="process-container">
+    <div class="step"><div class="circle">1</div><h4>Requirement</h4></div>
+    <div class="line"></div>
+    <div class="step"><div class="circle">2</div><h4>Sourcing</h4></div>
+    <div class="line"></div>
+    <div class="step"><div class="circle">3</div><h4>Delivery</h4></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <h3>Why Choose Us</h3>
+  <div class="grid">
+    <div class="why-card"><h4>Trusted Network</h4><p>Verified suppliers</p></div>
+    <div class="why-card"><h4>Best Pricing</h4><p>Competitive rates</p></div>
+    <div class="why-card"><h4>Fast Support</h4><p>Quick response</p></div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section id="quote">
+  <h3>Request a Quote</h3>
+  <form>
+    <input placeholder="Product">
+    <input placeholder="Quantity">
+    <input placeholder="Location">
+    <textarea placeholder="Details"></textarea>
+    <button class="btn">Submit</button>
+  </form>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919444384637">💬</a>
+
+<footer>© 2026 Veyon Exim</footer>
+
+<script>
+// WhatsApp
+function openWhatsApp(){
+  window.open("https://wa.me/919444384637?text=Hello%20I%20want%20a%20quote");
+}
+
+// Scroll animation
+const cards=document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{
+  cards.forEach(card=>{
+    const rect=card.getBoundingClientRect();
+    if(rect.top<window.innerHeight-100){
+      card.style.opacity="1";
+      card.style.transform="translateY(0)";
+    }
+  });
+});
+
+// Particles
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+for(let i=0;i<50;i++){
+  particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2});
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle="#38bdf8";
+    ctx.fill();
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
